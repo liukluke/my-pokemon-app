@@ -15,15 +15,12 @@ const initPokemons = ({ commit }) => axios
     })
     .catch(err => console.log(err));
 
-// const getPokemon = ({ commit }, namePokemon) => axios
-//     .get(`https://pokeapi.co/api/v2/pokemon/${namePokemon}`)
-//     .then(data => {
-//         const pokemon = data.data;
-//         commit('ONE_POKEMON', pokemon)
-//     })
-//     .catch(err => console.log(err));
+const getPokemon = ({ commit }, namePokemon) => {
+    commit('ONE_POKEMON', namePokemon)
+}
+
 
 
 export {
-    initPokemons
+    initPokemons, getPokemon
 }

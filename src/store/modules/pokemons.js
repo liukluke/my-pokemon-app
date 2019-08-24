@@ -1,6 +1,6 @@
 const state = {
   pokemons: [],
-  infoPokemon: {}
+  infoPokemon: []
 }
 
 
@@ -8,8 +8,8 @@ const mutations = {
   'SET_POKEMONS'(state, newPokemons) {
     state.pokemons = newPokemons
   },
-  'ONE_POKEMON'(state, pokemon) {
-    state.infoPokemon = pokemon
+  'ONE_POKEMON'(state, namePokemon) {
+    state.infoPokemon = state.pokemons.filter(pokemon => pokemon.name === namePokemon);
   }
 }
 
@@ -19,7 +19,7 @@ const getters = {
     return state.pokemons
   },
   infoPokemon: state => {
-    return state.infoPokemon
+    return state.infoPokemon[0]
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <appPokemon v-for="pokemon in pokemons" v-bind:key="pokemon.name" :pokemon="pokemon" />
+    <appPokemon v-for="pokemon in pokemons" v-bind:key="pokemon.id" :pokemon="pokemon" />
   </div>
 </template>
 
