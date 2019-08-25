@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const initPokemons = ({ commit }) => axios
-    .get("https://pokeapi.co/api/v2/pokemon/?limit=20")
+    .get("https://pokeapi.co/api/v2/pokemon/")
     .then(data => {
-        const pokemons = data.data.results;
+        const pokemons = [...data.data.results];
         const newPokemons = [];
-        pokemons.forEach(pokemon => {
+        pokemons.map(pokemon => {
             axios
                 .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
                 .then(data => newPokemons.push(data.data))
@@ -18,8 +18,6 @@ const initPokemons = ({ commit }) => axios
 const getPokemon = ({ commit }, namePokemon) => {
     commit('ONE_POKEMON', namePokemon)
 }
-
-
 
 export {
     initPokemons, getPokemon
