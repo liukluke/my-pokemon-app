@@ -12,7 +12,9 @@ export default {
   },
   computed: {
     pokemons() {
-      return this.$store.getters.pokemons;
+      return this.$store.getters.pokemons
+        .filter(e => e.id <= 20)
+        .sort((a, b) => a.id - b.id);
     }
   }
 };
