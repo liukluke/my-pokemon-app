@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home-container">
     <appPokemon v-for="pokemon in pokemons" v-bind:key="pokemon.id" :pokemon="pokemon" />
   </div>
 </template>
@@ -12,9 +12,8 @@ export default {
   },
   computed: {
     pokemons() {
-      return this.$store.getters.pokemons
-        .filter(e => e.id <= 20)
-        .sort((a, b) => a.id - b.id);
+      const pokemons = this.$store.getters.pokemons;
+      return pokemons.sort((a, b) => a.id - b.id);
     }
   }
 };

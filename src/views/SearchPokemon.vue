@@ -1,10 +1,14 @@
 <template>
-  <div>
+  <div id="search-container">
     <input type="text" v-model="search" placeholder="Search pokemons!" />
     <div v-if="search !== ''">
-      <div v-bind:key="pokemon.id" v-for="pokemon in filteredList">
-        <router-link v-bind:to="`/pokemon/${pokemon.name}`">{{ pokemon.name }}</router-link>
-      </div>
+      <ul>
+        <div v-bind:key="pokemon.id" v-for="pokemon in filteredList">
+          <router-link v-bind:to="`/pokemon/${pokemon.name}`">
+            <li>{{ pokemon.name }}</li>
+          </router-link>
+        </div>
+      </ul>
     </div>
   </div>
 </template>

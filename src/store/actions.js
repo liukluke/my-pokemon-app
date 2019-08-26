@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const initPokemons = ({ commit }) => axios
-    .get("https://pokeapi.co/api/v2/pokemon/?limit=60")
+    .get("https://pokeapi.co/api/v2/pokemon/?limit=20")
     .then(data => {
         const pokemons = [...data.data.results];
         const newPokemons = [];

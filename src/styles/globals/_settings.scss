@@ -1,10 +1,32 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap");
+$family-font: "Baloo Bhai", cursive;
+
+//COLORS
+$colors: (
+  black: #1c1c1c,
+  pokemons: #2c3e50,
+  activeLink: #ed1a25,
+  texts: #2c3e50,
+  border: #e1e1e1,
+  hoverBackground: lighten(#000000, 96%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+//VARIABLES
+$dotted: 1px dotted;
+
+//GENERAL
 * > {
   box-sizing: border-box;
 }
 
 html,
 body {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: $family-font;
   text-transform: capitalize;
 }
 

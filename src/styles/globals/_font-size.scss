@@ -2,3 +2,25 @@ html,
 body  {
   font-size: 10px;
 }
+
+nav {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    span {
+        font-size: 1.6rem;
+    }
+}
+
+input {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+li {
+    font-size: 1.5rem;
+}

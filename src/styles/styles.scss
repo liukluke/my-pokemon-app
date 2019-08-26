@@ -1,8 +1,14 @@
 //GLOBALS
 @import "globals/settings";
+@import "globals/font-size";
 
 //PAGES
 @import "pages/app";
 
-//LAYOUT
-@import "layout/navbar";
+//COMPONENTS
+@import "components/header";
+@import "components/pokemon";
+
+//VIEWS
+@import "views/home";
+@import "views/search";
