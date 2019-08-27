@@ -5,8 +5,30 @@
   border: $dotted color(border);
   box-sizing: border-box;
   border-radius: $border-radius;
+  text-align: left;
+  .info-box-title {
+    margin-bottom: 12px;
+    border-bottom: $dotted color(border);
+    padding-bottom: 8px;
+  }
   .info-box-content {
     max-height: 150px;
     overflow-y: scroll;
+    p {
+      margin-bottom: 6px;
+      line-height: 18px;
+      strong {
+        font-weight: 900;
+      }
+      .empty-item {
+          color: color(noitem);
+          &:after{
+              content: " -"
+          }
+          &:before{
+              content: "- "
+          }
+      }
+    }
   }
 }

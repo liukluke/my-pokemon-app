@@ -1,31 +1,34 @@
 <template>
-  <article v-if="llave === 'order'">
-    <div class="info-box-tittle">
-      <h2>{{title[0]}}</h2>
+  <article v-if="llave === 'order'" class="info-box">
+    <div class="info-box-title">
+      <h3>{{title[0]}}</h3>
     </div>
     <div class="info-box-content">
-      <p>order: {{infos[0]}}</p>
+      <p><strong>{{infos[0]}}</strong></p>
     </div>
-    <div class="info-box-tittle">
-      <h2>{{title[1]}}</h2>
+    <div style="margin-top:24px" class="info-box-title">
+      <h3><strong>{{title[1]}}</strong></h3>
     </div>
     <div class="info-box-content">
-      <p>Default: {{infos[1]? 'yes' : 'no'}}</p>
+      <p>{{infos[1]? 'yes' : 'no'}}</p>
     </div>
   </article>
   <article v-else class="info-box">
-    <div class="info-box-tittle">
-      <h2>{{title}}</h2>
+    <div class="info-box-title">
+      <h3>{{title}}</h3>
     </div>
     <div v-if="llave === 'base'" class="info-box-content">
-      <p>{{infos}}</p>
+      <p><strong>{{infos}}</strong></p>
     </div>
     <div v-else-if="llave === 'height'" class="info-box-content">
-      <p>heigth: {{infos[0]}}</p>
-      <p>weight: {{infos[1]}}</p>
+      <p>heigth: <strong>{{infos[0]}}</strong></p>
+      <p>weight: <strong>{{infos[1]}}</strong></p>
     </div>
     <div v-else-if="infos.length === 0" class="info-box-content">
-      <p>NO {{title}}</p>
+      <p><span class="empty-item">no {{title}}</span></p>
+    </div>
+    <div v-else-if="llave === 'stat'" class="info-box-content">
+      <p v-for="info in infos" v-bind:key="info[llave].name">{{info[llave].name}}: <strong>{{info.base_stat}}</strong></p>
     </div>
     <div v-else class="info-box-content">
       <p v-for="info in infos" v-bind:key="info[llave].name">{{info[llave].name}}</p>

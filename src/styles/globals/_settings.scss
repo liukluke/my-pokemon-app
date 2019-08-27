@@ -9,7 +9,8 @@ $colors: (
   activeLink: #ed1a25,
   texts: #2c3e50,
   border: #e1e1e1,
-  hoverBackground: lighten(#000000, 96%)
+  hoverBackground: lighten(#000000, 96%),
+  noitem: #bababa
 );
 
 @function color($color-name) {
