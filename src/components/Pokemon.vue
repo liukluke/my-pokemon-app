@@ -1,6 +1,9 @@
 <template>
   <div :style="{'background-color': randomColors}" class="pokemon-container">
-    <router-link v-bind:to="`/pokemon/${pokemon.name}`">
+    <div style="position:relative" v-if="!pokemon">
+      <appLoader />
+    </div>
+    <router-link v-else v-bind:to="`/pokemon/${pokemon.name}`">
       <div class="box-inside">
         <div class="image-box">
           <img
@@ -20,8 +23,13 @@
 
 
 <script>
+import Loader from './../atoms/Loader';
+
 export default {
   props: ["pokemon"],
+  components: {
+    appLoader: Loader
+  },
   computed: {
     randomColors() {
       const letters = "0123456789ABCDEF";
