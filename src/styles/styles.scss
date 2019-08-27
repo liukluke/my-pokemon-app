@@ -7,6 +7,7 @@
 
 //ATOMS
 @import "atoms/loader";
+@import "atoms/info-box";
 
 //COMPONENTS
 @import "components/header";
@@ -15,3 +16,4 @@
 //VIEWS
 @import "views/home";
 @import "views/search";
+@import "views/info";

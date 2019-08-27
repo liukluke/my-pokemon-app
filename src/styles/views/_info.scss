@@ -1,0 +1,20 @@
+.info-container {
+  width: 960px;
+  margin: 0 auto;
+  padding-top: 60px;
+  color: color(texts);
+  text-align: center;
+  h1 {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 48px;
+    margin-bottom: 24px;
+  }
+  .sprites {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .info-boxes {
+    display: grid;
+    grid-template-columns: $grid-template;
+  }
+}

@@ -7,8 +7,8 @@
       <div class="box-inside">
         <div class="image-box">
           <img
-            v-bind:src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`"
-            alt
+            v-bind:src="pokemon.sprites.front_default"
+            alt="pokemon-sprite"
           />
         </div>
         <h2>

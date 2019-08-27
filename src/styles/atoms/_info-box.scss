@@ -1,0 +1,12 @@
+.info-box {
+  margin: 6px;
+  padding: 32px 24px;
+  min-height: 200px;
+  border: $dotted color(border);
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  .info-box-content {
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+}

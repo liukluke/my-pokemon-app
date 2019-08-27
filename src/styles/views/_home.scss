@@ -1,6 +1,6 @@
 .home-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: $grid-template;
     grid-auto-rows: 295px;
     padding: 2px;
     grid-gap: 2px;
