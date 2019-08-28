@@ -1,6 +1,5 @@
 //FONTS
 @import url("https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap");
-$family-font: "Baloo Bhai", cursive;
 
 //COLORS
 $colors: (
@@ -18,6 +17,7 @@ $colors: (
 }
 
 //VARIABLES
+$family-font: "Baloo Bhai", cursive;
 $dotted: 1px dotted;
 $border-radius: 4px;
 $grid-template: repeat(4, 1fr);

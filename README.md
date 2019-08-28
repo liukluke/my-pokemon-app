@@ -1,29 +1,12 @@
 # my-pokemon-app
 
-## Project setup
-```
-yarn install
-```
+Prueba técnica realizada para Minsait.
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Instrucciones: 
+- Para installar los paquetes es necesarios utilizar el comando ```yarn install```.  
+- Para arrancar el proyecto utilizar el comando ```yarn run serve```.
+- Navegar a la página http://localhost:8080
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+Paginá de referencia: https://www.onesaitplatform.online/web/pokemon-exercise/#/
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Tecnologías utilizadas: Vue Cli, Vuex, Scss, Html5, JS (ES6)

@@ -4,7 +4,7 @@ const initPokemons = ({ commit }) => axios
     .get("https://pokeapi.co/api/v2/pokemon/?limit=20")
     .then(data => {
         const pokemons = [...data.data.results];
-        let newPokemons = [];
+        const newPokemons = [];
         pokemons.map(pokemon => {
             axios
                 .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
